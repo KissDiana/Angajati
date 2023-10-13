@@ -27,9 +27,7 @@ public class EmployeeImpl implements EmployeeRepositoryInterface {
 	public boolean addEmployee(Employee employee) {
 		employee.setId(employeeList.size());
 		if (employeeValidator.isValid(employee)) {
-			BufferedWriter bw = null;
-			try {
-				bw = new BufferedWriter(new FileWriter(employeeDBFile, true));
+			try (BufferedWriter bw = new BufferedWriter(new FileWriter(employeeDBFile, true))) {
 				bw.write(employee.toString());
 				bw.newLine();
 				bw.close();

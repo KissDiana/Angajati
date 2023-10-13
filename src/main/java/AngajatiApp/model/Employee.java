@@ -10,7 +10,7 @@ public class Employee {
 	private static final int CNP_INDEX = 2;
 	private static final int DIDACTIC_FUNCTION_INDEX = 3;
 	private static final int SALARY_INDEX = 4;
-	private static final int ID = 5;
+	private static final int ID_EMP = 5;
 	private int id;
 	private String nume;/** The last name of the employee */
 	private String firstName; /** The first name of the employee */
@@ -156,7 +156,7 @@ public class Employee {
 				employee.setFunction(DidacticFunction.CONFERENTIAR);
 
 			employee.setSalary(Double.valueOf(attributes[SALARY_INDEX]));
-			//employee.setId(Integer.valueOf(attributes[ID]));
+
 			employee.setId(Integer.valueOf(line));
 
 			if (!validator.isValid(employee)) {

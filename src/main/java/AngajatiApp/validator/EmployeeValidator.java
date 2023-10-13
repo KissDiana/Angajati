@@ -4,8 +4,12 @@ import AngajatiApp.controller.DidacticFunction;
 import AngajatiApp.model.Employee;
 
 public class EmployeeValidator {
-
-	public EmployeeValidator(){}
+	/**
+	 *
+	 */
+	public EmployeeValidator(){
+		//Not anything for initialization in Validator
+	}
 
 	public boolean isValid(Employee employee) {
 		return isFirstNameValid(employee) 
