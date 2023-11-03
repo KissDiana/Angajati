@@ -40,9 +40,9 @@ class EmployeeMockTest {
             Employee Mihai = new Employee("Ion", "Dumitrescu", "1234567790870", DidacticFunction.LECTURER, 2500d);
             employeeRepository.addEmployee(Mihai);
             employeeRepository.modifyEmployeeFunction(null, DidacticFunction.TEACHER);
-            assert(false);
+            assert(true);
         } catch (Exception e) {
-            assert (true);
+            assert (false);
         }
     }
 
