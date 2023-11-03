@@ -60,9 +60,7 @@ public class EmployeeMock implements EmployeeRepositoryInterface {
 				if (employeeList.get(i).getId() == employee.getId())
 					employeeList.get(i).setFunction(newFunction);
 				i++;
-			}
-		}
-	}
+			}}}
 
 	@Override
 	public List<Employee> getEmployeeList() {

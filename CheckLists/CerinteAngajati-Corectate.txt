@@ -1,0 +1,25 @@
+﻿Cerinte
+
+
+
+Proiectati şi implementati o aplicatie Java pentru rezolvarea problemei propuse. Se va evidentia o
+arhitectura stratificata. Informatiile vor fi preluate din fisier text (employees.txt) din directorul employeeDB. Datele din fisier vor avea urmatorul format: nume;prenume;CNP;functia didactica;salariul de incadrare.
+
+ 
+
+Enunturi
+
+
+2. Salariati universitate
+
+Universitatea doreste dezvoltarea unui program pentru gestiunea salariatilor. Acesta va avea urmatoarele
+functionalitati:
+
+i. adaugarea unui nou angajat (nume, prenume, CNP, functia didactica, salariul de incadrare) in urma unei validari a datelor introduse, CNP-ul sa contina 13 caractere, numele si prenumele alcatuit doar din litere. 
+i.a sa se atribuie fiecarui angajat un cod unic.
+
+ii. modificarea functiei didactice (asistent/lector/conferentiar/profesor) a unui angajat;
+
+iii. afisarea salariatilor ordonati descrescator dupa salariu si crescator dupa varsta (CNP).
+
+iv. adminul care gestioneaza datele sa aiba parola si user.

@@ -41,10 +41,12 @@ public class StartApp {
 			case 2:
 				System.out.println("Dati id-ul angajatului: ");
 				int idOldEmployee = scanner.nextInt();
-				Employee oldEmployee = employeeController.findEmployeeById(idOldEmployee);
-				System.out.println("Dati noua functie didactica: ");
-				String newFunction = scanner.next();
-				employeeController.modifyEmployee(oldEmployee, getDidacticFunction(newFunction));
+				if(employeeController.findEmployeeById(idOldEmployee) != null) {
+					Employee oldEmployee = employeeController.findEmployeeById(idOldEmployee);
+					System.out.println("Dati noua functie didactica: ");
+					String newFunction = scanner.next();
+					employeeController.modifyEmployee(oldEmployee, getDidacticFunction(newFunction));
+				}
 				break;
 			case 3:
 				for(Employee employeeItem : employeeController.getSortedEmployeeList())
@@ -73,7 +75,7 @@ public class StartApp {
 		return new Employee(firstName, lastName, cnp, getDidacticFunction(didacticFuntion), salary);
 	}
 	
-	private static DidacticFunction getDidacticFunction(String didacticFunction) {
+public static DidacticFunction getDidacticFunction(String didacticFunction) {
 		if (didacticFunction.toUpperCase().equals("ASISTENT"))
 		{
 			return DidacticFunction.ASISTENT;
